@@ -1,3 +1,15 @@
+/* #region Root */
+:root {
+    --dark-grey: #5f6368;
+    --dark-grey-op: rgba(95, 99, 104, 0.4);
+    --blue: #3367d6;
+    --dark: #3c4043;
+    --padding-1: 20px;
+    --padding-2: 22px;
+}
+
+/* #endregion Root */
+
 /* #region Regole Reset */
 * {
     box-sizing: border-box;
@@ -5,11 +17,109 @@
     padding: 0;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* #endregion Regole Reset */
 
 /* #region Main Header */
-.main-header {
-    padding: 10px;
+.main-header .header__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3rem;
+    padding: var(--padding-2) var(--padding-1) 0;
+    font-size: 22px;
+}
+
+.main-header .header__info a {
+    margin-left: 5px;
+    color: var(--dark-grey);
+}
+
+.main-header a:hover {
+    text-decoration: none;
+}
+
+.main-header .nav__list {
+    display: flex;
+    gap: 2rem;
+    padding-left: var(--padding-2);
+    list-style-type: none;
+    border-bottom: 1px solid var(--dark-grey-op);
+}
+
+.main-header .nav__list a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: var(--dark-grey);
+    font-weight: 600;
+}
+
+.main-header .nav__list .active {
+    position: relative;
+}
+
+.main-header .nav__list .active::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: var(--blue);
+}
+
+.main-header .nav__list .active a {
+    color: var(--blue);
 }
 
 /* #endregion Main Header */
+
+/* #region Main Content */
+.main-content .container {
+    max-width: 1042px;
+    margin-inline: auto;
+    padding: 32px;
+}
+
+.main-content .risposta ol {
+    padding-left: 1rem;
+}
+
+.main-content .domanda {
+    padding-top: 64px;
+    font-size: 24px;
+    color: var(--dark);
+}
+
+.main-content .risposta {
+    font-size: 14px;
+}
+
+.main-content .risposta .subtitle {
+    padding-top: 52px;
+}
+
+.main-content .risposta p {
+    margin-block: 10px;
+    padding-top: 20px;
+    line-height: 1.714;
+}
+
+.main-content .risposta p:first-child,
+.main-content .risposta h3+p {
+    margin-top: 0;
+}
+
+.main-content li,
+.main-content li li {
+    padding: 12px 0 0 16px;
+}
+
+/* #endregion Main Content */
