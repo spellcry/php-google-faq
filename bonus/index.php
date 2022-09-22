@@ -7,20 +7,56 @@
     <title>Domande frequenti - Privacy e Termini - Google</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/01de7d5bf8.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <?php
+    $menu = [
+        [
+            'testo' => 'Introduzione',
+            'is_active' => false
+        ],
+        [
+            'testo' => 'Note sulla privacy',
+            'is_active' => false
+        ],
+        [
+            'testo' => 'Termini di servizio',
+            'is_active' => false
+        ],
+        [
+            'testo' => 'Tecnologie',
+            'is_active' => false
+        ],
+        [
+            'testo' => 'Domande frequenti',
+            'is_active' => true
+        ]
+    ];
+    ?>
     <header class="main-header">
         <div class="header__info">
             <img src="./assets/google.svg">
             <a href="#">Privacy e termini</a>
+            <div class="dots">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <img class="profile-pic" src="./assets/me.jpg">
         </div>
         <nav class="header__nav">
             <menu class="nav__list">
-                <li class="list__item"><a href="#">Introduzione</a></li>
-                <li class="list__item"><a href="#">Note sulla privacy</a></li>
-                <li class="list__item"><a href="#">Termini di servizio</a></li>
-                <li class="list__item"><a href="#">Tecnologie</a></li>
-                <li class="list__item active"><a href="#">Domande frequenti</a></li>
+                <?php
+                foreach ($menu as $listItem) {
+                    ?>
+                    <li class="<?= $listItem['is_active'] == true ? 'list__item active' : 'list__item' ?>">
+                        <a href="#"><?= $listItem['testo'] ?></a>
+                    </li>
+                    <?php
+                }
+                ?>
             </menu>
         </nav>
     </header>

@@ -79,6 +79,19 @@ a {
     color: var(--blue);
 }
 
+.main-header .dots {
+    display: flex;
+    gap: 2px;
+    color: var(--dark-grey);
+    margin-inline: auto 2rem;
+}
+
+.main-header .profile-pic {
+    width: 32px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
 /* #endregion Main Header */
 
 /* #region Main Content */
