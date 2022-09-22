@@ -95,6 +95,7 @@ a {
     gap: 2px;
     color: var(--dark-grey);
     margin-inline: auto 2rem;
+    font-size: 1.1rem;
 }
 
 .main-header .dots:hover {
