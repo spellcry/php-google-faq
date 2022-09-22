@@ -79,17 +79,26 @@ a {
     color: var(--blue);
 }
 
+.main-header .dots,
+.main-header .profile-pic {
+    width: 32px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .main-header .dots {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
     gap: 2px;
     color: var(--dark-grey);
     margin-inline: auto 2rem;
 }
 
-.main-header .profile-pic {
-    width: 32px;
-    aspect-ratio: 1;
-    border-radius: 50%;
+.main-header .dots:hover {
+    background-color: rgba(95, 99, 104, 0.15);
 }
 
 /* #endregion Main Header */
